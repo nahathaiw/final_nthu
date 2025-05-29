@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "a07e19c7-52df-4d5d-a6c2-3b7d4abbbce0",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1210,
+  "height": 602,
+  "platformSettings": {},
+  "subMetas": {
+    "Enchanted Land II": {
+      "ver": "1.0.6",
+      "uuid": "4e8ea8f6-2bc8-4804-ad68-abf6c099baaf",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "a07e19c7-52df-4d5d-a6c2-3b7d4abbbce0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1210,
+      "height": 602,
+      "rawWidth": 1210,
+      "rawHeight": 602,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
