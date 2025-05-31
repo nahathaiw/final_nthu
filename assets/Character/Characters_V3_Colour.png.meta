@@ -10,7 +10,16 @@
   "packable": true,
   "width": 160,
   "height": 320,
-  "platformSettings": {},
+  "platformSettings": {
+    "default": {
+      "formats": [
+        {
+          "name": "png",
+          "quality": 80
+        }
+      ]
+    }
+  },
   "subMetas": {
     "Characters_V3_Colour": {
       "ver": "1.0.6",

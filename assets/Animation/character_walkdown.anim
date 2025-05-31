@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "character_walkdown",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.05,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "596672e4-57ff-4dcc-b443-e11754341dd1"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "90db5aeb-da2a-426d-ba2a-3c87f31ecb26"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
