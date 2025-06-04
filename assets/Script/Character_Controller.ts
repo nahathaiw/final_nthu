@@ -12,9 +12,17 @@ export default class PlayerController extends cc.Component {
     private keyMap: { [key: number]: boolean } = {};
 
     onLoad() {
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
-    }
+    cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+
+    // ✅ Make sure physics is enabled (keep this line only if not done in editor)
+    cc.director.getPhysicsManager().enabled = true;
+
+    // ✅ Disable gravity for top-down movement
+    this.getComponent(cc.RigidBody).gravityScale = 0;
+}
+
+
 
     onDestroy() {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -32,9 +40,8 @@ export default class PlayerController extends cc.Component {
     update(dt: number) {
         this.handleInput();
 
-        const displacement = this.moveDir.mul(this.moveSpeed * dt);
-        this.node.x += displacement.x;
-        this.node.y += displacement.y;
+        this.getComponent(cc.RigidBody).linearVelocity = this.moveDir.mul(this.moveSpeed);
+
 
         // Play animation based on direction
         if (this.moveDir.equals(cc.Vec2.ZERO)) {
