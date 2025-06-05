@@ -671,6 +671,7 @@
     },
     "spawnRangeX": 800,
     "spawnRangeY": 400,
+    "gameDuration": 30,
     "_id": "1eLxsKUpZMZbYpaGbw7AD9"
   }
 ]
