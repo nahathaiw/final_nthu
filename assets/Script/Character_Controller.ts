@@ -55,11 +55,12 @@ export default class PlayerController extends cc.Component {
                 this.node.scaleX = 1;
             } else if (this.moveDir.x > 0) {
                 this.playAnim("character_walkright");
-                this.node.scaleX = 1;
+                this.node.scaleX = Math.abs(this.node.scaleX); // face right
             } else if (this.moveDir.x < 0) {
                 this.playAnim("character_walkright");
-                this.node.scaleX = -1;
+                this.node.scaleX = -Math.abs(this.node.scaleX); // face left
             }
+
         }
     }
 
