@@ -18,6 +18,9 @@ export default class ScoreController extends cc.Component {
     @property(MiniGameController)
     character: MiniGameController = null; // ✅ Fixed name here
 
+    @property(cc.Node)
+    audioNode: cc.Node = null; // 🎧 MiniGameAudio node reference
+
     private score: number = 0;
     private timeLeft: number = 60;
     private gameActive: boolean = true;
@@ -105,7 +108,17 @@ export default class ScoreController extends cc.Component {
 
         console.log(`Game Over! Final Score: ${this.score}, Grade: ${grade}`);
 
-        cc.director.loadScene('PE_Game_Final');
+        // 🎧 Stop audio before switching scenes
+        if (this.audioNode && this.audioNode.isValid) {
+            const audio = this.audioNode.getComponent('MiniGameAudio');
+            if (audio) {
+                audio.onDestroy();
+            }
+        }
+
+        this.scheduleOnce(() => {
+            cc.director.loadScene('PE_Game_Final'); }, 0.1);
+
     }
 
     simulatePress(button: cc.Button) {

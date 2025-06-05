@@ -5,28 +5,52 @@ export default class MiniGameAudio extends cc.Component {
     @property(cc.AudioSource)
     bgm: cc.AudioSource = null;
 
+    private bgmStarted: boolean = false;
+    private keyListenerAttached: boolean = false;
+
     onLoad() {
         const currentScene = cc.director.getScene().name;
 
-        // ✅ Only play in PE_Game
         if (currentScene === "PE_Game") {
-            if (this.bgm && !this.bgm.isPlaying) {
+            cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+            this.keyListenerAttached = true;
+        } else {
+            this.stopBGM();
+        }
+    }
+
+    onKeyDown(event: cc.Event.EventKeyboard) {
+        if (!this.bgmStarted && this.bgm) {
+            if (
+                event.keyCode === cc.macro.KEY.left ||
+                event.keyCode === cc.macro.KEY.right
+            ) {
                 this.bgm.loop = true;
                 this.bgm.volume = 0.6;
                 this.bgm.play();
-            }
-        } else {
-            // 🔇 If not PE_Game, stop any audio on this node
-            if (this.bgm && this.bgm.isPlaying) {
-                this.bgm.stop();
+                this.bgmStarted = true;
             }
         }
     }
 
-    onDestroy() {
-        // Ensure BGM is stopped if node is destroyed when leaving scene
-        if (this.bgm && this.bgm.isPlaying) {
+        stopBGM() {
+    if (!this.bgm || !cc.isValid(this.bgm, true)) return;
+
+    try {
+        if (this.bgm.isPlaying) {
             this.bgm.stop();
+        }
+    } catch (e) {
+        console.warn("⚠️ BGM already destroyed or invalid:", e);
+    }
+}
+
+
+    onDestroy() {
+        this.stopBGM();
+        if (this.keyListenerAttached) {
+            cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+            this.keyListenerAttached = false;
         }
     }
 }
