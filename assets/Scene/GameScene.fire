@@ -550,6 +550,10 @@
       "__id__": 7
     },
     "moveSpeed": 100,
+    "dashMultiplier": 2,
+    "dashDuration": 0.3,
+    "dashCooldown": 1,
+    "jumpForce": 300,
     "_id": "ffLQJ0YjpBNqzV0S+vmZhR"
   },
   {
@@ -5516,7 +5520,7 @@
       "__id__": 133
     },
     "_enabled": true,
-    "targetScene": "Nuclearshooting",
+    "targetScene": "Nuclear_start_scene",
     "_id": "3fdy2NzBhMApv+AQ+ilCBs"
   },
   {

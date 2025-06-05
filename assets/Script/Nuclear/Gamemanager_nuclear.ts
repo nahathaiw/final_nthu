@@ -24,6 +24,10 @@ export default class GameManager extends cc.Component {
     @property
     gameDuration: number = 30;
 
+    @property({ type: cc.AudioClip })
+    bgmClip: cc.AudioClip = null!;
+
+
     private elapsedTime: number = 0;
     private isGameOver: boolean = false;
     
@@ -33,6 +37,8 @@ export default class GameManager extends cc.Component {
     onLoad() {
         this.schedule(this.spawnTarget, this.spawnInterval);
         this.updateScore(0);  // 初始化分數顯示
+
+        cc.audioEngine.playMusic(this.bgmClip, true);
     }
 
     update(dt: number) {
@@ -102,5 +108,7 @@ export default class GameManager extends cc.Component {
                 resultScript.setFinalScore(this.score);
             }
         });
+        cc.audioEngine.stopMusic();
+
     }
 }

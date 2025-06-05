@@ -3,7 +3,7 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class NuclearDoorTrigger extends cc.Component {
     @property({ type: cc.String })
-    targetScene: string = "Nuclearshooting";
+    targetScene: string = "Nuclear_start_scene";
 
     private anim: cc.Animation = null;
     private triggered: boolean = false;
