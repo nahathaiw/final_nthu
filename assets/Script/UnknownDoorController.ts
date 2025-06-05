@@ -39,9 +39,17 @@ export default class UnknownDoorController extends cc.Component {
     }
 
     playOpenAnimation() {
-        if (this.anim) {
-            console.log("[UnknownDoorController] ▶ Playing animation: Uk_Open_Door");
-            this.anim.play("Uk_Open_Door");
-        }
+    if (this.anim) {
+        console.log("[UnknownDoorController] ▶ Playing animation: Uk_Open_Door");
+
+        // ✅ Listen to the animation's 'finished' event
+        this.anim.once('finished', () => {
+            console.log("[UnknownDoorController] 🎯 Animation finished. Loading FlagQuiz_Main...");
+            cc.director.loadScene("FlagQuiz_Main");
+        });
+
+        this.anim.play("Uk_Open_Door");
     }
+}
+
 }

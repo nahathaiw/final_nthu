@@ -6,10 +6,10 @@ export default class MiniGameCharacterController extends cc.Component {
     anim: cc.Animation = null;
 
     @property
-    stepDistance: number = 1;  // move 1 pixel per tap
+    stepDistance: number = 200;  // move 1 pixel per tap
 
     @property
-    stepDuration: number = 1.0; // takes 1 second to move
+    stepDuration: number = 0.2; // takes 1 second to move
 
     private lastX: number = 0;
 

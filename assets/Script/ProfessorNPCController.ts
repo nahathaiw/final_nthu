@@ -14,17 +14,22 @@ export default class ProfessorNPC extends cc.Component {
 
     onLoad() {
         cc.director.getPhysicsManager().enabled = true;
+
+        const rb = this.getComponent(cc.RigidBody);
+        rb.gravityScale = 0;
+        rb.fixedRotation = true;
+        rb.type = cc.RigidBodyType.Dynamic;
+        rb.bullet = true; // Enable continuous collision detection
+
         this.randomizeDirection();
     }
 
     update(dt: number) {
-        // Move NPC
-        const offset = this.direction.mul(this.walkSpeed * dt);
-        const newPos = this.node.position.add(new cc.Vec3(offset.x, offset.y, 0));
-        this.node.setPosition(newPos);
+        // Move via physics engine
+        const rb = this.getComponent(cc.RigidBody);
+        rb.linearVelocity = this.direction.mul(this.walkSpeed);
 
-
-        // Timer to change direction
+        // Change direction every 1~3 seconds
         this.changeDirTimer -= dt;
         if (this.changeDirTimer <= 0) {
             this.randomizeDirection();
@@ -42,7 +47,7 @@ export default class ProfessorNPC extends cc.Component {
             cc.v2(0, -1),    // down
         ];
         this.direction = dirs[Math.floor(Math.random() * dirs.length)];
-        this.changeDirTimer = Math.random() * 2 + 1; // change every 1~3 seconds
+        this.changeDirTimer = Math.random() * 2 + 1;
     }
 
     private updateAnimation() {
@@ -54,7 +59,7 @@ export default class ProfessorNPC extends cc.Component {
             animName = "Prof_go_right";
             this.node.scaleX = 1;
         } else if (this.direction.x < 0) {
-            animName = "Prof_go_right"; // Reuse right, flip for left
+            animName = "Prof_go_right";
             this.node.scaleX = -1;
         } else if (this.direction.y > 0) {
             animName = "Prof_walk_up";
