@@ -986,6 +986,7 @@
     "character": {
       "__id__": 30
     },
+    "audioNode": null,
     "_id": "ec174Ige5Mu7XjgfJt6a5c"
   },
   {
@@ -1385,6 +1386,7 @@
     "character": {
       "__id__": 30
     },
+    "audioNode": null,
     "_id": "1boJ8HoOVIua5VpaUaITC7"
   },
   {
@@ -1851,7 +1853,7 @@
   {
     "__type__": "cc.Node",
     "_name": "MiniGameBG",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },
@@ -1860,7 +1862,7 @@
         "__id__": 46
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 48
