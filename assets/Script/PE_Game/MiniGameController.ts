@@ -6,10 +6,10 @@ export default class MiniGameController extends cc.Component {
     anim: cc.Animation = null;
 
     @property
-    stepDistance: number = 1; // 1 pixel movement
+    stepDistance: number = 100; // 1 pixel movement
 
     @property
-    stepDuration: number = 1.0; // Takes 1 second to move 1 pixel
+    stepDuration: number = 0.2; // Takes 1 second to move 1 pixel
 
     private lastX: number = 0;
 
