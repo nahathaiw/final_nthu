@@ -1,6 +1,8 @@
 {
   "start-scene": "beafadc5-cd2d-42c5-90f2-05ef116c27ef",
   "group-list": [
-    "default"
+    "default",
+    "bullet",
+    "target"
   ]
 }
