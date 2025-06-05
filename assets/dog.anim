@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dog",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.11666666666666667,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b5b280b8-da57-4423-9657-b97eae11f5be"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "df056052-82cb-4f98-95ba-9e3d0c5f7346"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "afd3cc87-62f1-455a-b6bf-3fb1c6e76ee1"
+            }
+          },
+          {
+            "frame": 0.1,
+            "value": {
+              "__uuid__": "c80b236f-d530-4890-b612-1774710981a0"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
