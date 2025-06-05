@@ -672,6 +672,9 @@
     "spawnRangeX": 800,
     "spawnRangeY": 400,
     "gameDuration": 30,
+    "bgmClip": {
+      "__uuid__": "1d85778a-ccc7-4738-a89e-220b8c540fc2"
+    },
     "_id": "1eLxsKUpZMZbYpaGbw7AD9"
   }
 ]
