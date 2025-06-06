@@ -112,15 +112,15 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
+      "x": 0,
       "y": 0.5
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        262.413,
-        263.131,
+        174.413,
+        264.131,
         0,
         0,
         0,
@@ -171,7 +171,7 @@
       "y": 0
     },
     "_fillStart": 0,
-    "_fillRange": 0,
+    "_fillRange": 1,
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": ""
@@ -269,7 +269,7 @@
     "_spriteFrame": {
       "__uuid__": "c9206e04-74e9-430c-9c16-0866f8d6fb70"
     },
-    "_type": 0,
+    "_type": 3,
     "_sizeMode": 1,
     "_fillType": 0,
     "_fillCenter": {
@@ -278,7 +278,7 @@
       "y": 0
     },
     "_fillStart": 0,
-    "_fillRange": 0,
+    "_fillRange": 1,
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": ""
