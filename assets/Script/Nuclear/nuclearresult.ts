@@ -29,6 +29,10 @@ export default class ResultManager extends cc.Component {
     }
 
     exitButton() {
+        // ✅ 儲存回到主場景的位置（不改變原結構）
+        cc.sys.localStorage.setItem("returnX", "112.117");
+        cc.sys.localStorage.setItem("returnY", "3244.631");
+
         cc.director.loadScene("GameScene");
     }
 }

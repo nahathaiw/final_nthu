@@ -20,6 +20,10 @@ export default class FlagQuiz_End extends cc.Component {
     }
 
     onClickBackToMain() {
+        // ✅ 儲存返回主場景時的座標
+        cc.sys.localStorage.setItem("returnX", "1880.879");
+        cc.sys.localStorage.setItem("returnY", "3292.695");
+
         cc.audioEngine.stopMusic(); // optional, if BGM is still playing
         cc.director.loadScene("GameScene"); // go to main menu
     }

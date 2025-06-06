@@ -19,17 +19,17 @@ export default class GameSceneController extends cc.Component {
 
         if (this.bgm) {
             this.bgmId = cc.audioEngine.playMusic(this.bgm, true);
+            cc.audioEngine.setMusicVolume(0.5); // 🔉 Tone down BGM to 50%
         } else {
             cc.warn("⚠️ bgm 尚未綁定！");
         }
-}
-
+    }
 
     // 🔘 按下暫停按鈕
     onPauseClick() {
         this.pausePanel.active = true;
         cc.audioEngine.pauseMusic();
-        cc.director.pause(); // 暫停遊戲邏輯（非必要，看需求）
+        cc.director.pause();
     }
 
     // 🔘 暫停面板中的繼續按鈕
@@ -37,5 +37,10 @@ export default class GameSceneController extends cc.Component {
         this.pausePanel.active = false;
         cc.audioEngine.resumeMusic();
         cc.director.resume();
+    }
+
+    // 🔘 可選：手動調整音量的方法（例如從滑桿控制）
+    setBgmVolume(volume: number) {
+        cc.audioEngine.setMusicVolume(volume);
     }
 }

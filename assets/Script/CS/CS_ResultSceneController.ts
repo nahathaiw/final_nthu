@@ -45,6 +45,9 @@ export default class ResultSceneController extends cc.Component {
 
     // ⏪ 回主遊戲場景
     returntoMainGame() {
+        // ✅ Set return coordinates
+        cc.sys.localStorage.setItem("returnX", "1304.109");
+        cc.sys.localStorage.setItem("returnY", "3260.652");
         cc.director.loadScene("GameScene");
     }
 

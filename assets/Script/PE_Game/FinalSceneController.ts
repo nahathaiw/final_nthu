@@ -28,6 +28,10 @@ export default class FinalSceneController extends cc.Component {
     }
 
     onReturnClick() {
+        // ✅ 存座標以便回主場景時定位角色
+        cc.sys.localStorage.setItem("returnX", "884.348");
+        cc.sys.localStorage.setItem("returnY", "3260.652");
+
         cc.director.loadScene('GameScene'); // ✅ 返回主選單場景
     }
 }

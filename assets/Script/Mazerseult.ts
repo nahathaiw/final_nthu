@@ -45,6 +45,10 @@ export default class Mazeresult extends cc.Component {
 
     // 🔘 回到主場景
     onBackToGame() {
+        // ✅ Save return coordinates
+        cc.sys.localStorage.setItem("returnX", "359.821");
+        cc.sys.localStorage.setItem("returnY", "2342.023");
+
         cc.log("🔙 返回 GameScene");
         cc.director.loadScene("GameScene");
     }
