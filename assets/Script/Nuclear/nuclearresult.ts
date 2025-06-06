@@ -1,3 +1,5 @@
+import UserManager from "../Usermanagement";  // ⬅️ 確保你有這行！
+
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -10,6 +12,10 @@ export default class ResultManager extends cc.Component {
 
     setFinalScore(score: number) {
         this.finalScore = score;
+
+        // ✅ 自動將分數記錄到 Firebase
+        UserManager.updateScoreIfHigher("NuclearGame", score);
+
         this.showResult();
     }
 
@@ -21,7 +27,8 @@ export default class ResultManager extends cc.Component {
 
         this.resultLabel.string = `分數：${this.finalScore}\n成績：${grade}`;
     }
-    exitButton(){
+
+    exitButton() {
         cc.director.loadScene("GameScene");
     }
 }
