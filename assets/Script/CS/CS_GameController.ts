@@ -36,24 +36,38 @@ export default class GameController extends cc.Component {
     private gameActive: boolean = true;
     private bitCount: number = 4; // default
 
-    onLoad() {
-        const mode = cc.sys.localStorage.getItem("mode");
-        const bitCountStr = cc.sys.localStorage.getItem("bitCount");
 
-        if (bitCountStr) {
-            this.bitCount = parseInt(bitCountStr);
-        }
+onLoad() {
+    const mode = cc.sys.localStorage.getItem("mode");
+    const bitCountStr = cc.sys.localStorage.getItem("bitCount");
 
-        if (mode === "practice") {
-            this.totalQuestions = Number.MAX_SAFE_INTEGER;
-            this.timeLimit = 999999;
-        
-            const quitButton = this.node.getChildByName("QuitButton");
-        if (quitButton) quitButton.active = true;
-        }
-
-        this.resetGame();
+    if (bitCountStr) {
+        this.bitCount = parseInt(bitCountStr);
     }
+
+    if (mode === "practice") {
+        this.totalQuestions = Number.MAX_SAFE_INTEGER;
+        this.timeLimit = 999999;
+
+        const quitButton = this.node.getChildByName("QuitButton");
+        if (quitButton) quitButton.active = true;
+        cc.director.getPhysicsManager().enabled = false;
+
+    } else {
+        // ✅ Only enable physics in non-practice mode
+        cc.director.getPhysicsManager().enabled = true;
+        cc.director.getPhysicsManager().gravity = cc.v2(0, 0);
+
+        // ✅ Add physics to each button
+        this.binaryButtons.forEach(button => {
+            this.addPhysicsToButton(button.node);
+        });
+
+    }
+
+    this.resetGame();
+}
+
 
     resetGame() {
         this.currentQuestion = 0;
@@ -142,4 +156,27 @@ export default class GameController extends cc.Component {
     QuitButton(){
         cc.director.loadScene("CS_ModeSelect");
     }
+
+
+addPhysicsToButton(node: cc.Node) {
+    const rb = node.addComponent(cc.RigidBody);
+    rb.type = cc.RigidBodyType.Dynamic;
+    rb.linearDamping = 0;
+    rb.angularDamping = 0;
+
+    const collider = node.addComponent(cc.PhysicsBoxCollider);
+    collider.size = node.getContentSize();
+    collider.restitution = 1;
+    collider.friction = 0;
+    collider.apply();
+
+    rb.linearVelocity = cc.v2(
+        (Math.random() - 0.5) * 200,
+        (Math.random() - 0.5) * 200
+    );
+}
+
+
+
+
 }

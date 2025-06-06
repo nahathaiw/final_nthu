@@ -452,6 +452,9 @@
     "bullet2Prefab": {
       "__uuid__": "1d1697b7-ce19-438c-8298-bf3d82d7b9bf"
     },
+    "shootSfx": {
+      "__uuid__": "1e13149d-b5ad-4d80-82f5-ed6766cb4fda"
+    },
     "_id": "92Gll6W1hHBZn80pWCtW3h"
   },
   {
@@ -549,8 +552,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -394.898,
-        278.179,
+        -364.898,
+        268.179,
         0,
         0,
         0,
@@ -675,6 +678,7 @@
     "bgmClip": {
       "__uuid__": "1d85778a-ccc7-4738-a89e-220b8c540fc2"
     },
+    "shootSfx": null,
     "_id": "1eLxsKUpZMZbYpaGbw7AD9"
   }
 ]

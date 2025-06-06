@@ -494,6 +494,9 @@
     "wrongSfx": {
       "__uuid__": "7773718f-79b0-42c6-b7b8-34c0dc3ef7be"
     },
+    "bgm": {
+      "__uuid__": "6ed6f031-1be6-4457-9420-2e3876d3e936"
+    },
     "_id": "7cefv4CTdPQoDpmVnZOPgk"
   },
   {
@@ -706,8 +709,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -775,8 +778,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -837,8 +840,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -889,9 +892,9 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "button",
-    "_N$string": "button",
-    "_fontSize": 20,
+    "_string": "🇹🇭",
+    "_N$string": "🇹🇭",
+    "_fontSize": 100,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,
@@ -1091,8 +1094,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1160,8 +1163,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1222,8 +1225,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1276,7 +1279,7 @@
     "_dstBlendFactor": 771,
     "_string": "button",
     "_N$string": "button",
-    "_fontSize": 20,
+    "_fontSize": 100,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,
@@ -1476,8 +1479,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1488,8 +1491,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        349.362,
-        195.629,
+        350.543,
+        147.208,
         0,
         0,
         0,
@@ -1545,8 +1548,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1607,8 +1610,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1661,7 +1664,7 @@
     "_dstBlendFactor": 771,
     "_string": "button",
     "_N$string": "button",
-    "_fontSize": 20,
+    "_fontSize": 100,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,
@@ -1861,8 +1864,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1873,8 +1876,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        606.359,
-        194.944,
+        608.721,
+        146.523,
         0,
         0,
         0,
@@ -1930,8 +1933,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1992,8 +1995,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 150,
-      "height": 40
+      "width": 200,
+      "height": 150
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2046,7 +2049,7 @@
     "_dstBlendFactor": 771,
     "_string": "button",
     "_N$string": "button",
-    "_fontSize": 20,
+    "_fontSize": 100,
     "_lineHeight": 40,
     "_enableWrapText": false,
     "_N$file": null,

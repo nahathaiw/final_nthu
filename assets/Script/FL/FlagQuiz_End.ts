@@ -1,7 +1,7 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class EndScene extends cc.Component {
+export default class FlagQuiz_End extends cc.Component {
     @property(cc.Label)
     scoreLabel: cc.Label = null;
 
@@ -11,6 +11,12 @@ export default class EndScene extends cc.Component {
     }
 
     onClickBackToMain() {
-        cc.director.loadScene("GameScene");
+        cc.audioEngine.stopMusic(); // optional, if BGM is still playing
+        cc.director.loadScene("GameScene"); // go to main menu
+    }
+
+    onClickRetry() {
+        cc.audioEngine.stopMusic(); // optional, restart fresh
+        cc.director.loadScene("FlagQuiz"); // reload the quiz scene
     }
 }
