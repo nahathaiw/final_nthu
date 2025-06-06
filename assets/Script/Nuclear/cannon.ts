@@ -18,6 +18,10 @@ export default class CannonController extends cc.Component {
     @property(cc.Prefab)
     bullet2Prefab: cc.Prefab = null!;
 
+    @property({ type: cc.AudioClip })
+    shootSfx: cc.AudioClip = null!;
+
+
 
 
     private moveDir: number = 0;
@@ -101,6 +105,8 @@ export default class CannonController extends cc.Component {
         bullet.angle = this.node.angle;
         const bulletScript = bullet.getComponent("Bullet") //as Bullet;
         bulletScript.init(cc.v2(Math.cos(angleRad), Math.sin(angleRad)));
+        cc.audioEngine.playEffect(this.shootSfx, false);
+
     }
 
     private shootBullet2() {

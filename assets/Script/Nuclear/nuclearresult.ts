@@ -21,4 +21,7 @@ export default class ResultManager extends cc.Component {
 
         this.resultLabel.string = `分數：${this.finalScore}\n成績：${grade}`;
     }
+    exitButton(){
+        cc.director.loadScene("GameScene");
+    }
 }

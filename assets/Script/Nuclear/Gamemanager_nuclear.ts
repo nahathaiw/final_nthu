@@ -27,6 +27,10 @@ export default class GameManager extends cc.Component {
     @property({ type: cc.AudioClip })
     bgmClip: cc.AudioClip = null!;
 
+    @property({ type: cc.AudioClip })
+    shootSfx: cc.AudioClip = null!;
+
+
 
     private elapsedTime: number = 0;
     private isGameOver: boolean = false;
