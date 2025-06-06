@@ -20,6 +20,10 @@ export default class FlagQuizGame extends cc.Component {
     @property(cc.AudioClip)
     wrongSfx: cc.AudioClip = null;
 
+    @property(cc.AudioClip)
+    bgm: cc.AudioClip = null;
+
+
     private score: number = 0;
     private currentQuestionIndex: number = 0;
     private gameActive: boolean = true;
@@ -27,59 +31,64 @@ export default class FlagQuizGame extends cc.Component {
     private questions = [
         { //1
             question: "Where is Mount Fuji located?",
-            correct: "Japan",
-            options: ["Japan", "South Korea", "China", "Thailand"]
+            correct: "🇯🇵",
+            options: ["🇯🇵", "🇰🇷", "🇨🇳", "🇹🇭"]
         },
         {//2
             question: "Which country speaks Thai?",
-            correct: "Thailand",
-            options: ["Taiwan", "Thailand", "Laos", "Malaysia"]
+            correct: "🇹🇭",
+            options: ["🇹🇼", "🇹🇭", "🇱🇦", "🇲🇾"]
         },
         {//3
             question: "Where is the Eiffel Tower?",
-            correct: "France",
-            options: ["France", "Germany", "Belgium", "Switzerland"]
+            correct: "🇫🇷",
+            options: ["🇫🇷", "🇩🇪", "🇧🇪", "🇨🇭"]
         },
         {//4
-            question: "What country is this flag <🇩🇪>?",
-            correct: "Germany",
-            options: ["Myanmar", "Germany", "Turkey", "Brazil"]
+            question: "What flag is vatican city",
+            correct: "🇻🇦",
+            options: ["🇻🇦", "🇧🇱", "🇵🇲", "🇸🇲"]
         },
         {//5
             question: "Where is Mona Lisa?",
-            correct: "France",
-            options: ["France", "USA", "England", "Italy"]
+            correct: "🇫🇷",
+            options: ["🇫🇷", "🇺🇸", "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "🇮🇹"]
         },
         {//6
             question: "Where is the Great Pyramid of Giza located?",
-            correct: "Egypt",
-            options: ["Egypt", "Greece", "Mexico", "India"]
+            correct: "🇪🇬",
+            options: ["🇪🇬", "🇬🇷", "🇲🇽", "🇮🇳"]
         },
         {//7
             question: "Which country is famous for maple syrup?",
-            correct: "Canada",
-            options: ["Canada", "USA", "Russia", "Norway"]
+            correct: "🇨🇦",
+            options: ["🇨🇦", "🇺🇸", "🇷🇺", "🇳🇴"]
         },
         {//8
             question: "Where is the Taj Mahal?",
-            correct: "India",
-            options: ["India", "Pakistan", "Bangladesh", "Nepal"]
+            correct: "🇮🇳",
+            options: ["🇮🇳", "🇵🇰", "🇧🇩", "🇳🇵"]
         },
         {//9
             question: "Where would you find the Colosseum?",
-            correct: "Italy",
-            options: ["Italy", "France", "Spain", "Portugal"]
+            correct: "🇮🇹",
+            options: ["🇮🇹", "🇫🇷", "🇪🇸", "🇻🇦"]
         },
         {//10
             question: "Where are kangaroos native to?",
-            correct: "Australia",
-            options: ["Australia", "New Zealand", "South Africa", "USA"]
+            correct: "🇦🇺",
+            options: ["🇦🇺", "🇳🇿", "🇬🇸", "🇫🇰"]
         },
         // Add more questions...
     ];
 
     onLoad() {
         this.resetGame();
+
+        if (this.bgm) {
+            cc.audioEngine.playMusic(this.bgm, true); // true = loop
+        }
+        
     }
 
     resetGame() {
@@ -130,12 +139,16 @@ export default class FlagQuizGame extends cc.Component {
         this.showNextQuestion();
     }
     onQuitClicked() {
+        cc.audioEngine.stopMusic();
         cc.director.loadScene("GameScene"); // or your main menu scene name
     }
     
     endGame() {
         const percentage = Math.round((this.score / this.questions.length) * 100);
         cc.sys.localStorage.setItem("finalScorePercent", percentage.toString());
+        
+        cc.audioEngine.stopMusic();
+
         cc.director.loadScene("FlagQuiz_End");
 
     }
