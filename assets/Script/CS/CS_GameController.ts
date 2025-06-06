@@ -35,6 +35,8 @@ export default class GameController extends cc.Component {
     private timer: number = 0;
     private gameActive: boolean = true;
     private bitCount: number = 4; // default
+    // private practiceMode: boolean = false;
+
 
     onLoad() {
         const mode = cc.sys.localStorage.getItem("mode");
@@ -51,6 +53,14 @@ export default class GameController extends cc.Component {
             const quitButton = this.node.getChildByName("QuitButton");
         if (quitButton) quitButton.active = true;
         }
+
+        cc.director.getPhysicsManager().enabled = true;
+        cc.director.getPhysicsManager().gravity = cc.v2(0, 0); // Zero gravity
+
+        this.binaryButtons.forEach(button => {
+            this.addPhysicsToButton(button.node);
+        });
+
 
         this.resetGame();
     }
@@ -142,4 +152,27 @@ export default class GameController extends cc.Component {
     QuitButton(){
         cc.director.loadScene("CS_ModeSelect");
     }
+
+
+addPhysicsToButton(node: cc.Node) {
+    const rb = node.addComponent(cc.RigidBody);
+    rb.type = cc.RigidBodyType.Dynamic;
+    rb.linearDamping = 0;
+    rb.angularDamping = 0;
+
+    const collider = node.addComponent(cc.PhysicsBoxCollider);
+    collider.size = node.getContentSize();
+    collider.restitution = 1;
+    collider.friction = 0;
+    collider.apply();
+
+    rb.linearVelocity = cc.v2(
+        (Math.random() - 0.5) * 200,
+        (Math.random() - 0.5) * 200
+    );
+}
+
+
+
+
 }
