@@ -33,4 +33,8 @@ export default class ResultSceneController extends cc.Component {
         cc.sys.localStorage.setItem("mode", "quiz");
         cc.director.loadScene("CS_ModeSelect");
     }
+
+    returntoMainGame(){
+        cc.director.loadScene("GameScene");
+    }
 }

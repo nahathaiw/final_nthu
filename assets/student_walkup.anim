@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "student_walkup",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.03333333333333333,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "9239b6b8-4e40-4fc1-bd7a-8be6cd4a54d7"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "af533789-bb4c-4856-b108-b9614497801f"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
