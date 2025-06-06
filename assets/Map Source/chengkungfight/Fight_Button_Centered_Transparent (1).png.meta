@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "fa6b647e-9948-4f69-aab7-29165b1ed5b3",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1024,
+  "height": 1024,
+  "platformSettings": {},
+  "subMetas": {
+    "Fight_Button_Centered_Transparent (1)": {
+      "ver": "1.0.6",
+      "uuid": "30aa4efc-54e4-4949-bb0e-e63797bf1309",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "fa6b647e-9948-4f69-aab7-29165b1ed5b3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -1,
+      "trimX": 1,
+      "trimY": 258,
+      "width": 1022,
+      "height": 510,
+      "rawWidth": 1024,
+      "rawHeight": 1024,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

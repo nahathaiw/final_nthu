@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "0e1f541f-07ea-47bd-9101-688ad7d47a7a",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 160,
+  "height": 320,
+  "platformSettings": {},
+  "subMetas": {
+    "woman_walkup1": {
+      "ver": "1.0.6",
+      "uuid": "953e9e67-e687-4b61-9be9-ff2806ab4ffa",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "0e1f541f-07ea-47bd-9101-688ad7d47a7a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 24,
+      "offsetY": -104.5,
+      "trimX": 98,
+      "trimY": 257,
+      "width": 12,
+      "height": 15,
+      "rawWidth": 160,
+      "rawHeight": 320,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

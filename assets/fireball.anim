@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "fireball",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.06666666666666667,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "cd578202-f31e-498c-888e-df4ebc8117e3"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "602ba629-c110-4ffd-805e-c6585d41834a"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "e0a8ace1-16a3-4101-a91e-b6ba56f4d85e"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "9cb1271f-4d39-41e3-9b0e-c1aaa21bf89e"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

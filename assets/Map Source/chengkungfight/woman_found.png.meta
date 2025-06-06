@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "bb74d6c1-e9a2-401d-b678-b32649bfe5fc",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 160,
+  "height": 320,
+  "platformSettings": {},
+  "subMetas": {
+    "woman_found": {
+      "ver": "1.0.6",
+      "uuid": "7f88b9f7-9a09-4c41-8d3b-a030bd8ad69c",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "bb74d6c1-e9a2-401d-b678-b32649bfe5fc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -72,
+      "offsetY": -101.5,
+      "trimX": 2,
+      "trimY": 252,
+      "width": 12,
+      "height": 19,
+      "rawWidth": 160,
+      "rawHeight": 320,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
