@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "start-scene": "6f0ed683-9be5-4547-a65b-467b291db65d",
-=======
   "start-scene": "beafadc5-cd2d-42c5-90f2-05ef116c27ef",
->>>>>>> origin/main
   "group-list": [
     "default",
     "bullet",
